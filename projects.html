@@ -1,52 +1,1203 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>projects - NCU Hub</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body>
+    <title>Projects | NCU Hub</title>
 
-        <nav>
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            
-        </nav>
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
 
-        <h1>Ncu Hub projects</h1>
+    <!-- NCU Hub CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-        <p>Explore the amazing projects created by nanchang university students!</p>
+    <!-- Main JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
 
-        <h2>Students projects</h2>
+<body>
 
-        <p>Discover projects created by nanchang university students.</p>
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
-        <section>
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
 
-        <h3>AI attendance System</h3>
+    <div class="container">
 
-        <P>created by: Mmystery student</P>
+        <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="index.html"
+        >
 
-        <P>Description: This project uses AI to automate the attendance tracking process.</P>
+            <div class="brand-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
 
-        <P>votes: 0</P>
+            <div>
 
-        <button>vote</button>
+                <div class="fw-bold">
+                    NCU Hub
+                </div>
 
-        </section>
+                <small
+                    class="text-muted"
+                    data-en="Nanchang University"
+                    data-zh="南昌大学"
+                >
+                    Nanchang University
+                </small>
 
-        <section>
-        <h3>Smart Campus app</h3>
-        <P>Created by: Mystery Student</P>
-        <P>Description: This project aims to provide a comprehensive solution for managing and navigating the campus environment.</P>
-        <P>votes: 0</P>
-        <button>vote</button>
-        </section>
+            </div>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="mainNavbar"
+        >
+
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                        data-en="Home"
+                        data-zh="首页"
+                    >
+                        Home
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="projects.html"
+                        data-en="Projects"
+                        data-zh="项目"
+                    >
+                        Projects
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="students.html"
+                        data-en="Students"
+                        data-zh="学生"
+                    >
+                        Students
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="teachers.html"
+                        data-en="Teachers"
+                        data-zh="教师"
+                    >
+                        Teachers
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="help.html"
+                        data-en="Help"
+                        data-zh="帮助"
+                    >
+                        Help
+                    </a>
+
+                </li>
+
+
+                <!-- LANGUAGE -->
+
+                <li class="nav-item ms-lg-2">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-primary language-btn"
+                        onclick="
+                            changeLanguage(
+                                localStorage.getItem('language') === 'zh'
+                                ? 'en'
+                                : 'zh'
+                            )
+                        "
+                    >
+
+                        <i class="bi bi-translate"></i>
+
+                        <span>中文</span>
+
+                    </button>
+
+                </li>
+
+
+                <!-- LOGIN -->
+
+                <li class="nav-item ms-lg-2">
+
+                    <a
+                        href="login.html"
+                        class="btn btn-primary px-4"
+                        data-en="Login"
+                        data-zh="登录"
+                    >
+                        Login
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="py-5 bg-light">
+
+    <div class="container py-4">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <div
+                    class="text-primary fw-semibold mb-2"
+                    data-en="NCU PROJECT COMMUNITY"
+                    data-zh="南昌大学项目社区"
+                >
+                    NCU PROJECT COMMUNITY
+                </div>
+
+
+                <h1
+                    class="display-5 fw-bold mb-3"
+                    data-en="Explore Student Projects"
+                    data-zh="探索学生项目"
+                >
+                    Explore Student Projects
+                </h1>
+
+
+                <p
+                    class="lead text-muted mb-4"
+                    data-en="Discover projects created by Nanchang University students, vote for your favorites, and find opportunities to collaborate."
+                    data-zh="探索南昌大学学生创建的项目，为你喜欢的项目投票，并寻找合作机会。"
+                >
+                    Discover projects created by Nanchang University students,
+                    vote for your favorites, and find opportunities to collaborate.
+                </p>
+
+
+                <!-- SEARCH -->
+
+                <div class="input-group input-group-lg">
+
+                    <span class="input-group-text bg-white">
+                        <i class="bi bi-search"></i>
+                    </span>
+
+                    <input
+                        type="text"
+                        id="projectSearch"
+                        class="form-control"
+                        data-en-placeholder="Search projects..."
+                        data-zh-placeholder="搜索项目..."
+                        placeholder="Search projects..."
+                        onkeyup="searchProjects()"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <!-- FILTERS -->
+
+        <div class="d-flex flex-wrap gap-2 mb-5">
+
+            <button
+                class="btn btn-primary"
+                onclick="filterProjects('all')"
+                data-en="All Projects"
+                data-zh="全部项目"
+            >
+                All Projects
+            </button>
+
+
+            <button
+                class="btn btn-outline-primary"
+                onclick="filterProjects('Software Engineering')"
+                data-en="Software Engineering"
+                data-zh="软件工程"
+            >
+                Software Engineering
+            </button>
+
+
+            <button
+                class="btn btn-outline-primary"
+                onclick="filterProjects('Artificial Intelligence')"
+                data-en="Artificial Intelligence"
+                data-zh="人工智能"
+            >
+                Artificial Intelligence
+            </button>
+
+
+            <button
+                class="btn btn-outline-primary"
+                onclick="filterProjects('Cybersecurity')"
+                data-en="Cybersecurity"
+                data-zh="网络安全"
+            >
+                Cybersecurity
+            </button>
+
+
+            <button
+                class="btn btn-outline-primary"
+                onclick="filterProjects('Data Science')"
+                data-en="Data Science"
+                data-zh="数据科学"
+            >
+                Data Science
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             PROJECT GRID
+        ================================================= -->
+
+        <div
+            class="row g-4"
+            id="projectsGrid"
+        >
+
+
+            <!-- =================================================
+                 AI ATTENDANCE
+            ================================================= -->
+
+            <div
+                class="col-md-6 col-lg-4 project-item"
+                data-category="Artificial Intelligence"
+                data-name="AI Attendance System"
+            >
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+
+                            <span
+                                class="badge bg-primary"
+                                data-en="Artificial Intelligence"
+                                data-zh="人工智能"
+                            >
+                                Artificial Intelligence
+                            </span>
+
+                            <i class="bi bi-robot text-primary fs-4"></i>
+
+                        </div>
+
+
+                        <!-- BILINGUAL PROJECT NAME -->
+
+                        <h4
+                            class="fw-bold"
+                            data-en="AI Attendance System"
+                            data-zh="AI 智能考勤系统"
+                        >
+                            AI Attendance System
+                        </h4>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="An intelligent attendance system using AI and facial recognition technology."
+                            data-zh="使用人工智能和人脸识别技术的智能考勤系统。"
+                        >
+                            An intelligent attendance system using AI
+                            and facial recognition technology.
+                        </p>
+
+
+                        <div class="mt-auto">
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                <small class="text-muted">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <span
+                                        data-en="Ahmed"
+                                        data-zh="Ahmed"
+                                    >
+                                        Ahmed
+                                    </span>
+
+                                </small>
+
+
+                                <span class="fw-bold text-primary">
+
+                                    <span id="aiVotes">
+                                        25
+                                    </span>
+
+                                    <span
+                                        data-en=" votes"
+                                        data-zh=" 票"
+                                    >
+                                        votes
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="d-flex gap-2">
+
+                                <a
+                                    href="project-details.html?id=ai-attendance"
+                                    class="btn btn-outline-primary flex-grow-1"
+                                    data-en="View Details"
+                                    data-zh="查看详情"
+                                >
+                                    View Details
+                                </a>
+
+
+                                <button
+                                    class="btn btn-primary"
+                                    onclick="voteAI()"
+                                    title="Vote"
+                                    aria-label="Vote"
+                                >
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SMART CAMPUS
+            ================================================= -->
+
+            <div
+                class="col-md-6 col-lg-4 project-item"
+                data-category="Software Engineering"
+                data-name="Smart Campus App"
+            >
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+
+                            <span
+                                class="badge bg-success"
+                                data-en="Software Engineering"
+                                data-zh="软件工程"
+                            >
+                                Software Engineering
+                            </span>
+
+                            <i class="bi bi-phone text-success fs-4"></i>
+
+                        </div>
+
+
+                        <h4
+                            class="fw-bold"
+                            data-en="Smart Campus App"
+                            data-zh="智慧校园应用"
+                        >
+                            Smart Campus App
+                        </h4>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="A campus platform connecting students with campus services."
+                            data-zh="连接学生与校园服务的校园平台。"
+                        >
+                            A campus platform connecting students
+                            with campus services.
+                        </p>
+
+
+                        <div class="mt-auto">
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                <small class="text-muted">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <span
+                                        data-en="Li Wei"
+                                        data-zh="Li Wei"
+                                    >
+                                        Li Wei
+                                    </span>
+
+                                </small>
+
+
+                                <span class="fw-bold text-primary">
+
+                                    <span id="campusVotes">
+                                        18
+                                    </span>
+
+                                    <span
+                                        data-en=" votes"
+                                        data-zh=" 票"
+                                    >
+                                        votes
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="d-flex gap-2">
+
+                                <a
+                                    href="project-details.html?id=smart-campus"
+                                    class="btn btn-outline-primary flex-grow-1"
+                                    data-en="View Details"
+                                    data-zh="查看详情"
+                                >
+                                    View Details
+                                </a>
+
+
+                                <button
+                                    class="btn btn-primary"
+                                    onclick="voteCampus()"
+                                    title="Vote"
+                                    aria-label="Vote"
+                                >
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SECURITY SCANNER
+            ================================================= -->
+
+            <div
+                class="col-md-6 col-lg-4 project-item"
+                data-category="Cybersecurity"
+                data-name="NCU Security Scanner"
+            >
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+
+                            <span
+                                class="badge bg-danger"
+                                data-en="Cybersecurity"
+                                data-zh="网络安全"
+                            >
+                                Cybersecurity
+                            </span>
+
+                            <i class="bi bi-shield-lock text-danger fs-4"></i>
+
+                        </div>
+
+
+                        <h4
+                            class="fw-bold"
+                            data-en="NCU Security Scanner"
+                            data-zh="南昌大学安全扫描器"
+                        >
+                            NCU Security Scanner
+                        </h4>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="A student project for detecting common web security issues."
+                            data-zh="用于检测常见 Web 安全问题的学生项目。"
+                        >
+                            A student project for detecting common web
+                            security issues.
+                        </p>
+
+
+                        <div class="mt-auto">
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                <small class="text-muted">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <span
+                                        data-en="Mohamed"
+                                        data-zh="Mohamed"
+                                    >
+                                        Mohamed
+                                    </span>
+
+                                </small>
+
+
+                                <span class="fw-bold text-primary">
+
+                                    <span id="securityVotes">
+                                        12
+                                    </span>
+
+                                    <span
+                                        data-en=" votes"
+                                        data-zh=" 票"
+                                    >
+                                        votes
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="d-flex gap-2">
+
+                                <a
+                                    href="project-details.html?id=security-scanner"
+                                    class="btn btn-outline-primary flex-grow-1"
+                                    data-en="View Details"
+                                    data-zh="查看详情"
+                                >
+                                    View Details
+                                </a>
+
+
+                                <button
+                                    class="btn btn-primary"
+                                    onclick="voteSecurityProject()"
+                                    title="Vote"
+                                    aria-label="Vote"
+                                >
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 STUDENT DATA PLATFORM
+            ================================================= -->
+
+            <div
+                class="col-md-6 col-lg-4 project-item"
+                data-category="Data Science"
+                data-name="Student Data Platform"
+            >
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+
+                            <span
+                                class="badge bg-info text-dark"
+                                data-en="Data Science"
+                                data-zh="数据科学"
+                            >
+                                Data Science
+                            </span>
+
+                            <i class="bi bi-bar-chart-line text-info fs-4"></i>
+
+                        </div>
+
+
+                        <h4
+                            class="fw-bold"
+                            data-en="Student Data Platform"
+                            data-zh="学生数据平台"
+                        >
+                            Student Data Platform
+                        </h4>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="A data platform designed to organize and analyze student information and academic data."
+                            data-zh="用于组织和分析学生信息及学术数据的数据平台。"
+                        >
+                            A data platform designed to organize and analyze
+                            student information and academic data.
+                        </p>
+
+
+                        <div class="mt-auto">
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                <small class="text-muted">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <span
+                                        data-en="Sara"
+                                        data-zh="Sara"
+                                    >
+                                        Sara
+                                    </span>
+
+                                </small>
+
+
+                                <span class="fw-bold text-primary">
+
+                                    <span id="dataProjectVotes">
+                                        9
+                                    </span>
+
+                                    <span
+                                        data-en=" votes"
+                                        data-zh=" 票"
+                                    >
+                                        votes
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="d-flex gap-2">
+
+                                <a
+                                    href="project-details.html?id=student-data"
+                                    class="btn btn-outline-primary flex-grow-1"
+                                    data-en="View Details"
+                                    data-zh="查看详情"
+                                >
+                                    View Details
+                                </a>
+
+
+                                <button
+                                    class="btn btn-primary"
+                                    onclick="voteDataProject()"
+                                    title="Vote"
+                                    aria-label="Vote"
+                                >
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 AI STUDY ASSISTANT
+            ================================================= -->
+
+            <div
+                class="col-md-6 col-lg-4 project-item"
+                data-category="Artificial Intelligence"
+                data-name="AI Study Assistant"
+            >
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+
+                            <span
+                                class="badge bg-primary"
+                                data-en="Artificial Intelligence"
+                                data-zh="人工智能"
+                            >
+                                Artificial Intelligence
+                            </span>
+
+                            <i class="bi bi-stars text-primary fs-4"></i>
+
+                        </div>
+
+
+                        <h4
+                            class="fw-bold"
+                            data-en="AI Study Assistant"
+                            data-zh="AI 学习助手"
+                        >
+                            AI Study Assistant
+                        </h4>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="An AI-powered assistant helping students organize study materials and improve learning."
+                            data-zh="帮助学生整理学习资料并提高学习效率的人工智能助手。"
+                        >
+                            An AI-powered assistant helping students organize
+                            study materials and improve learning.
+                        </p>
+
+
+                        <div class="mt-auto">
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                <small class="text-muted">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <span
+                                        data-en="Yang Chen"
+                                        data-zh="Yang Chen"
+                                    >
+                                        Yang Chen
+                                    </span>
+
+                                </small>
+
+
+                                <span class="fw-bold text-primary">
+
+                                    <span id="studyProjectVotes">
+                                        7
+                                    </span>
+
+                                    <span
+                                        data-en=" votes"
+                                        data-zh=" 票"
+                                    >
+                                        votes
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="d-flex gap-2">
+
+                                <a
+                                    href="project-details.html?id=study-assistant"
+                                    class="btn btn-outline-primary flex-grow-1"
+                                    data-en="View Details"
+                                    data-zh="查看详情"
+                                >
+                                    View Details
+                                </a>
+
+
+                                <button
+                                    class="btn btn-primary"
+                                    onclick="voteStudyProject()"
+                                    title="Vote"
+                                    aria-label="Vote"
+                                >
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 CAMPUS EVENT MANAGER
+            ================================================= -->
+
+            <div
+                class="col-md-6 col-lg-4 project-item"
+                data-category="Software Engineering"
+                data-name="Campus Event Manager"
+            >
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+
+                            <span
+                                class="badge bg-success"
+                                data-en="Software Engineering"
+                                data-zh="软件工程"
+                            >
+                                Software Engineering
+                            </span>
+
+                            <i class="bi bi-calendar-event text-success fs-4"></i>
+
+                        </div>
+
+
+                        <h4
+                            class="fw-bold"
+                            data-en="Campus Event Manager"
+                            data-zh="校园活动管理系统"
+                        >
+                            Campus Event Manager
+                        </h4>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="A platform for students to discover, organize, and manage university events."
+                            data-zh="帮助学生发现、组织和管理校园活动的平台。"
+                        >
+                            A platform for students to discover, organize,
+                            and manage university events.
+                        </p>
+
+
+                        <div class="mt-auto">
+
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                <small class="text-muted">
+
+                                    <i class="bi bi-person"></i>
+
+                                    <span
+                                        data-en="Zhang Hao"
+                                        data-zh="Zhang Hao"
+                                    >
+                                        Zhang Hao
+                                    </span>
+
+                                </small>
+
+
+                                <span class="fw-bold text-primary">
+
+                                    <span id="eventsProjectVotes">
+                                        5
+                                    </span>
+
+                                    <span
+                                        data-en=" votes"
+                                        data-zh=" 票"
+                                    >
+                                        votes
+                                    </span>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="d-flex gap-2">
+
+                                <a
+                                    href="project-details.html?id=event-manager"
+                                    class="btn btn-outline-primary flex-grow-1"
+                                    data-en="View Details"
+                                    data-zh="查看详情"
+                                >
+                                    View Details
+                                </a>
+
+
+                                <button
+                                    class="btn btn-primary"
+                                    onclick="voteEventsProject()"
+                                    title="Vote"
+                                    aria-label="Vote"
+                                >
+                                    <i class="bi bi-hand-thumbs-up"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             SUBMITTED PROJECTS
+        ================================================= -->
+
+        <div
+            class="mt-5"
+            id="submittedProjectsContainer"
+        >
+        </div>
+
+
+        <!-- =================================================
+             NO RESULTS
+        ================================================= -->
+
+        <div
+            id="noProjectsMessage"
+            class="text-center py-5 d-none"
+        >
+
+            <i class="bi bi-search display-5 text-muted"></i>
+
+            <h4
+                class="mt-3"
+                data-en="No projects found"
+                data-zh="没有找到项目"
+            >
+                No projects found
+            </h4>
+
+
+            <p
+                class="text-muted"
+                data-en="Try another search term or category."
+                data-zh="请尝试其他搜索关键词或项目类别。"
+            >
+                Try another search term or category.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <div
+                class="text-primary fw-semibold mb-2"
+                data-en="FOR STUDENTS"
+                data-zh="面向学生"
+            >
+                FOR STUDENTS
+            </div>
+
+
+            <h2
+                class="fw-bold mb-3"
+                data-en="Have a Project?"
+                data-zh="有项目吗？"
+            >
+                Have a Project?
+            </h2>
+
+
+            <p
+                class="text-muted mb-4"
+                data-en="Share your project with the NCU community and find students who can help you build it."
+                data-zh="向南昌大学社区分享你的项目，并寻找可以帮助你完成项目的学生。"
+            >
+                Share your project with the NCU community and find students
+                who can help you build it.
+            </p>
+
+
+            <a
+                href="login.html"
+                class="btn btn-primary btn-lg px-4"
+                data-en="Submit Your Project"
+                data-zh="提交你的项目"
+            >
+                Submit Your Project
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="border-top py-4 bg-white">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <strong>
+                    NCU Hub
+                </strong>
+
+                <span
+                    class="text-muted ms-2"
+                    data-en="Nanchang University Student Platform"
+                    data-zh="南昌大学学生平台"
+                >
+                    Nanchang University Student Platform
+                </span>
+
+            </div>
+
+
+            <div class="col-md-6 text-md-end mt-3 mt-md-0">
+
+                <small
+                    class="text-muted"
+                    data-en="© 2026 NCU Hub Project"
+                    data-zh="© 2026 NCU Hub 项目"
+                >
+                    © 2026 NCU Hub Project
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
 
 </body>
-
 </html>

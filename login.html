@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | NCU Hub</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Main JavaScript -->
+    <script src="js/script.js" defer></script>
+
+</head>
+
+
+<body class="bg-light">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg bg-white border-bottom">
+
+    <div class="container">
+
+        <!-- BRAND -->
+
+        <a
+            class="navbar-brand d-flex align-items-center gap-2"
+            href="index.html"
+        >
+
+            <div class="brand-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+
+            <div>
+
+                <div class="fw-bold">
+                    NCU Hub
+                </div>
+
+                <small
+                    class="text-muted"
+                    data-en="Nanchang University"
+                    data-zh="南昌大学"
+                >
+                    Nanchang University
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="d-flex align-items-center gap-3">
+
+            <a
+                href="index.html"
+                class="nav-link d-none d-md-block"
+                data-en="Home"
+                data-zh="首页"
+            >
+                Home
+            </a>
+
+
+            <!-- LANGUAGE -->
+
+            <button
+                type="button"
+                class="btn btn-outline-primary language-btn"
+                onclick="
+                    changeLanguage(
+                        localStorage.getItem('language') === 'zh'
+                        ? 'en'
+                        : 'zh'
+                    )
+                "
+            >
+
+                <i class="bi bi-translate"></i>
+
+                <span
+                    data-en="中文"
+                    data-zh="English"
+                >
+                    中文
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     LOGIN AREA
+========================================================= -->
+
+<main class="login-page">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-10">
+
+                <div class="login-layout">
+
+
+                    <!-- =================================================
+                         LEFT SIDE
+                    ================================================= -->
+
+                    <div class="login-intro">
+
+                        <div class="login-intro-content">
+
+                            <div class="login-badge">
+
+                                <i class="bi bi-mortarboard-fill"></i>
+
+                                <span
+                                    data-en="NCU HUB"
+                                    data-zh="NCU HUB"
+                                >
+                                    NCU HUB
+                                </span>
+
+                            </div>
+
+
+                            <h1
+                                data-en="Build. Share. Collaborate."
+                                data-zh="创造 · 分享 · 合作"
+                            >
+                                Build. Share. Collaborate.
+                            </h1>
+
+
+                            <p
+                                data-en="Your university project community. Showcase your work, connect with students, and get feedback from teachers."
+                                data-zh="你的大学项目交流社区。展示你的作品，与学生合作，并获得教师反馈。"
+                            >
+                                Your university project community.
+                                Showcase your work, connect with students,
+                                and get feedback from teachers.
+                            </p>
+
+
+                            <div class="login-features">
+
+
+                                <div class="login-feature">
+
+                                    <div class="login-feature-icon">
+                                        <i class="bi bi-folder2-open"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <strong
+                                            data-en="Manage your projects"
+                                            data-zh="管理你的项目"
+                                        >
+                                            Manage your projects
+                                        </strong>
+
+                                        <span
+                                            data-en="Create and showcase your work."
+                                            data-zh="创建并展示你的项目。"
+                                        >
+                                            Create and showcase your work.
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="login-feature">
+
+                                    <div class="login-feature-icon">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <strong
+                                            data-en="Find collaborators"
+                                            data-zh="寻找合作伙伴"
+                                        >
+                                            Find collaborators
+                                        </strong>
+
+                                        <span
+                                            data-en="Work with students across NCU."
+                                            data-zh="与南昌大学的学生合作。"
+                                        >
+                                            Work with students across NCU.
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="login-feature">
+
+                                    <div class="login-feature-icon">
+                                        <i class="bi bi-chat-square-text"></i>
+                                    </div>
+
+                                    <div>
+
+                                        <strong
+                                            data-en="Get feedback"
+                                            data-zh="获得反馈"
+                                        >
+                                            Get feedback
+                                        </strong>
+
+                                        <span
+                                            data-en="Receive feedback from teachers."
+                                            data-zh="获得教师的反馈。"
+                                        >
+                                            Receive feedback from teachers.
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         RIGHT SIDE LOGIN
+                    ================================================= -->
+
+                    <div class="login-card">
+
+                        <div class="login-card-header">
+
+                            <div class="login-icon">
+
+                                <i class="bi bi-person-circle"></i>
+
+                            </div>
+
+
+                            <h2
+                                data-en="Welcome back"
+                                data-zh="欢迎回来"
+                            >
+                                Welcome back
+                            </h2>
+
+
+                            <p
+                                data-en="Sign in to continue to NCU Hub."
+                                data-zh="登录以继续使用 NCU Hub。"
+                            >
+                                Sign in to continue to NCU Hub.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- LOGIN FORM -->
+
+                        <form id="loginForm">
+
+
+                            <!-- EMAIL -->
+
+                            <div class="mb-4">
+
+                                <label
+                                    for="email"
+                                    class="form-label fw-semibold"
+                                    data-en="Email address"
+                                    data-zh="电子邮箱"
+                                >
+                                    Email address
+                                </label>
+
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+                                        <i class="bi bi-envelope"></i>
+                                    </span>
+
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        name="email"
+                                        placeholder="Enter your email"
+                                        data-en-placeholder="Enter your email"
+                                        data-zh-placeholder="请输入电子邮箱"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PASSWORD -->
+
+                            <div class="mb-4">
+
+                                <div class="d-flex justify-content-between">
+
+                                    <label
+                                        for="password"
+                                        class="form-label fw-semibold"
+                                        data-en="Password"
+                                        data-zh="密码"
+                                    >
+                                        Password
+                                    </label>
+
+                                </div>
+
+
+                                <div class="input-group">
+
+                                    <span class="input-group-text">
+                                        <i class="bi bi-lock"></i>
+                                    </span>
+
+
+                                    <input
+                                        type="password"
+                                        class="form-control"
+                                        id="password"
+                                        name="password"
+                                        placeholder="Enter your password"
+                                        data-en-placeholder="Enter your password"
+                                        data-zh-placeholder="请输入密码"
+                                        required
+                                    >
+
+
+                                    <button
+                                        type="button"
+                                        class="btn btn-outline-secondary"
+                                        id="togglePassword"
+                                    >
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- ROLE -->
+
+                            <div class="mb-4">
+
+                                <label
+                                    class="form-label fw-semibold"
+                                    data-en="Sign in as"
+                                    data-zh="登录身份"
+                                >
+                                    Sign in as
+                                </label>
+
+
+                                <div class="role-selection">
+
+
+                                    <!-- STUDENT -->
+
+                                    <label
+                                        class="role-option"
+                                        id="studentRole"
+                                    >
+
+                                        <input
+                                            type="radio"
+                                            name="role"
+                                            value="student"
+                                            checked
+                                        >
+
+
+                                        <div class="role-option-content">
+
+                                            <div class="role-icon">
+
+                                                <i class="bi bi-person"></i>
+
+                                            </div>
+
+
+                                            <div>
+
+                                                <strong
+                                                    data-en="Student"
+                                                    data-zh="学生"
+                                                >
+                                                    Student
+                                                </strong>
+
+                                                <span
+                                                    data-en="Student workspace"
+                                                    data-zh="学生工作区"
+                                                >
+                                                    Student workspace
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <i class="bi bi-check-circle-fill role-check"></i>
+
+                                    </label>
+
+
+
+                                    <!-- TEACHER -->
+
+                                    <label
+                                        class="role-option"
+                                        id="teacherRole"
+                                    >
+
+                                        <input
+                                            type="radio"
+                                            name="role"
+                                            value="teacher"
+                                        >
+
+
+                                        <div class="role-option-content">
+
+                                            <div class="role-icon">
+
+                                                <i class="bi bi-person-badge"></i>
+
+                                            </div>
+
+
+                                            <div>
+
+                                                <strong
+                                                    data-en="Teacher"
+                                                    data-zh="教师"
+                                                >
+                                                    Teacher
+                                                </strong>
+
+                                                <span
+                                                    data-en="Teacher dashboard"
+                                                    data-zh="教师管理面板"
+                                                >
+                                                    Teacher dashboard
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <i class="bi bi-check-circle-fill role-check"></i>
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- LOGIN BUTTON -->
+
+                            <button
+                                type="submit"
+                                class="btn btn-primary w-100 login-submit"
+                            >
+
+                                <span
+                                    data-en="Sign in"
+                                    data-zh="登录"
+                                >
+                                    Sign in
+                                </span>
+
+                                <i class="bi bi-arrow-right"></i>
+
+                            </button>
+
+
+                            <!-- MESSAGE -->
+
+                            <div
+                                id="loginMessage"
+                                class="mt-3 text-center small"
+                            ></div>
+
+
+                        </form>
+
+
+
+                        <!-- FOOTER -->
+
+                        <div class="login-card-footer">
+
+                            <i class="bi bi-shield-check"></i>
+
+                            <span
+                                data-en="Your account is protected by NCU Hub access controls."
+                                data-zh="你的账户受到 NCU Hub 访问控制保护。"
+                            >
+                                Your account is protected by NCU Hub access controls.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="border-top bg-white py-4">
+
+    <div class="container">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+
+            <strong>
+                NCU Hub
+            </strong>
+
+
+            <small
+                class="text-muted"
+                data-en="Nanchang University Student Platform"
+                data-zh="南昌大学学生项目交流平台"
+            >
+                Nanchang University Student Platform
+            </small>
+
+
+            <small
+                class="text-muted"
+                data-en="© 2026 NCU Hub Project"
+                data-zh="© 2026 NCU Hub 项目"
+            >
+                © 2026 NCU Hub Project
+            </small>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     LOGIN PAGE JAVASCRIPT
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const loginForm = document.getElementById("loginForm");
+    const passwordInput = document.getElementById("password");
+    const togglePassword = document.getElementById("togglePassword");
+    const loginMessage = document.getElementById("loginMessage");
+
+
+    /* =====================================================
+       PASSWORD VISIBILITY
+    ===================================================== */
+
+    if (togglePassword) {
+
+        togglePassword.addEventListener("click", function () {
+
+            if (passwordInput.type === "password") {
+
+                passwordInput.type = "text";
+
+                this.innerHTML =
+                    '<i class="bi bi-eye-slash"></i>';
+
+            } else {
+
+                passwordInput.type = "password";
+
+                this.innerHTML =
+                    '<i class="bi bi-eye"></i>';
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       ROLE SELECTION
+    ===================================================== */
+
+    const roleOptions =
+        document.querySelectorAll(".role-option");
+
+    roleOptions.forEach(function (option) {
+
+        option.addEventListener("click", function () {
+
+            roleOptions.forEach(function (item) {
+                item.classList.remove("selected");
+            });
+
+            option.classList.add("selected");
+
+            const radio =
+                option.querySelector('input[type="radio"]');
+
+            if (radio) {
+                radio.checked = true;
+            }
+
+        });
+
+    });
+
+
+    /* =====================================================
+       DEFAULT ROLE
+    ===================================================== */
+
+    const defaultRole =
+        document.querySelector(
+            'input[name="role"]:checked'
+        );
+
+    if (defaultRole) {
+
+        defaultRole
+            .closest(".role-option")
+            .classList.add("selected");
+
+    }
+
+
+    /* =====================================================
+       LOGIN
+    ===================================================== */
+
+    loginForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+
+        const email =
+            document.getElementById("email").value.trim();
+
+        const password =
+            document.getElementById("password").value.trim();
+
+        const selectedRole =
+            document.querySelector(
+                'input[name="role"]:checked'
+            );
+
+
+        if (!email || !password || !selectedRole) {
+
+            loginMessage.textContent =
+                "Please complete all fields.";
+
+            loginMessage.className =
+                "mt-3 text-center small text-danger";
+
+            return;
+
+        }
+
+
+        const role = selectedRole.value;
+
+
+        /* ================================================
+           SAVE LOGIN SESSION
+        ================================================= */
+
+        localStorage.setItem("loggedIn", "true");
+
+        localStorage.setItem(
+            "userRole",
+            role
+        );
+
+        localStorage.setItem(
+            "userEmail",
+            email
+        );
+
+
+        /* ================================================
+           SUCCESS MESSAGE
+        ================================================= */
+
+        loginMessage.textContent =
+            "Login successful. Redirecting...";
+
+        loginMessage.className =
+            "mt-3 text-center small text-success";
+
+
+        /* ================================================
+           REDIRECT
+        ================================================= */
+
+        setTimeout(function () {
+
+            if (role === "student") {
+
+                window.location.href =
+                    "students.html";
+
+            } else if (role === "teacher") {
+
+                window.location.href =
+                    "teachers.html";
+
+            }
+
+        }, 500);
+
+    });
+
+});
+
+</script>
+
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>
