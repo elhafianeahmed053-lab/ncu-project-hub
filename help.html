@@ -1,0 +1,1076 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Help | NCU Hub</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet"
+    >
+
+    <!-- NCU Hub CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!-- NCU Hub JavaScript -->
+    <script
+        src="js/script.js"
+        defer
+    ></script>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<nav class="ncu-navbar">
+
+    <div class="container ncu-nav-container">
+
+
+        <!-- BRAND -->
+
+        <a
+            href="index.html"
+            class="ncu-brand"
+        >
+
+            <span class="brand-icon">
+
+                <i class="bi bi-mortarboard-fill"></i>
+
+            </span>
+
+
+            <span>
+
+                <strong>NCU Hub</strong>
+
+                <small>
+                    Nanchang University
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <!-- NAVIGATION LINKS -->
+
+        <div class="ncu-nav-links">
+
+
+            <a href="index.html">
+
+                <span
+                    data-en="Home"
+                    data-zh="首页"
+                >
+                    Home
+                </span>
+
+            </a>
+
+
+            <a href="projects.html">
+
+                <span
+                    data-en="Projects"
+                    data-zh="项目"
+                >
+                    Projects
+                </span>
+
+            </a>
+
+
+            <a href="students.html">
+
+                <span
+                    data-en="Students"
+                    data-zh="学生"
+                >
+                    Students
+                </span>
+
+            </a>
+
+
+            <a href="teachers.html">
+
+                <span
+                    data-en="Teachers"
+                    data-zh="教师"
+                >
+                    Teachers
+                </span>
+
+            </a>
+
+
+            <a
+                href="help.html"
+                class="active"
+            >
+
+                <span
+                    data-en="Help"
+                    data-zh="帮助"
+                >
+                    Help
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <!-- NAVIGATION ACTIONS -->
+
+        <div class="ncu-nav-actions">
+
+
+            <!-- LANGUAGE -->
+
+            <button
+                class="language-btn"
+                onclick="
+                    changeLanguage(
+                        localStorage.getItem('language') === 'zh'
+                        ? 'en'
+                        : 'zh'
+                    )
+                "
+            >
+
+                <i class="bi bi-translate"></i>
+
+                <span
+                    data-en="中文"
+                    data-zh="English"
+                >
+                    中文
+                </span>
+
+            </button>
+
+
+            <!-- LOGIN -->
+
+            <a
+                href="login.html"
+                class="login-btn"
+            >
+
+                <i class="bi bi-box-arrow-in-right"></i>
+
+                <span
+                    data-en="Login"
+                    data-zh="登录"
+                >
+                    Login
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PAGE HEADER
+     ===================================================== -->
+
+<section class="page-header">
+
+    <div class="container">
+
+        <div class="page-header-content">
+
+
+            <div>
+
+                <span class="page-kicker">
+
+                    NCU HUB / HELP CENTER
+
+                </span>
+
+
+                <h1
+                    data-en="Help & Collaboration Center"
+                    data-zh="帮助与合作中心"
+                >
+
+                    Help & Collaboration Center
+
+                </h1>
+
+
+                <p
+                    data-en="Ask questions, find solutions, and connect with students who can help."
+                    data-zh="提出问题、寻找解决方案，并与能够帮助你的学生联系。"
+                >
+
+                    Ask questions, find solutions,
+                    and connect with students who can help.
+
+                </p>
+
+            </div>
+
+
+            <div class="page-header-icon">
+
+                <i class="bi bi-life-preserver"></i>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
+
+<main class="container main-content">
+
+
+    <!-- =================================================
+         SEARCH
+         ================================================= -->
+
+    <section class="mb-5">
+
+
+        <div class="project-search">
+
+            <i class="bi bi-search"></i>
+
+
+            <input
+                type="text"
+                id="helpSearch"
+                onkeyup="searchHelp()"
+                placeholder="Search questions..."
+                data-en-placeholder="Search questions..."
+                data-zh-placeholder="搜索问题..."
+            >
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         QUICK HELP
+         ================================================= -->
+
+    <section class="mb-5">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <span
+                    data-en="GET STARTED"
+                    data-zh="开始使用"
+                >
+                    GET STARTED
+                </span>
+
+            </span>
+
+
+            <h2
+                data-en="How can we help?"
+                data-zh="我们可以如何帮助你？"
+            >
+
+                How can we help?
+
+            </h2>
+
+
+            <p
+                data-en="Find help with projects, collaboration, technical problems, and student activities."
+                data-zh="获取项目、合作、技术问题和学生活动方面的帮助。"
+            >
+
+                Find help with projects,
+                collaboration, technical problems,
+                and student activities.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- CARD 1 -->
+
+            <div class="col-md-4">
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body p-4">
+
+
+                        <div class="project-main-icon mb-3">
+
+                            <i class="bi bi-code-slash"></i>
+
+                        </div>
+
+
+                        <h4
+                            data-en="Technical Help"
+                            data-zh="技术帮助"
+                        >
+
+                            Technical Help
+
+                        </h4>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="Get help with programming, software development, debugging, and technical problems."
+                            data-zh="获取编程、软件开发、调试和技术问题方面的帮助。"
+                        >
+
+                            Get help with programming,
+                            software development,
+                            debugging, and technical problems.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 2 -->
+
+            <div class="col-md-4">
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body p-4">
+
+
+                        <div class="project-main-icon mb-3">
+
+                            <i class="bi bi-people"></i>
+
+                        </div>
+
+
+                        <h4
+                            data-en="Find Collaborators"
+                            data-zh="寻找合作伙伴"
+                        >
+
+                            Find Collaborators
+
+                        </h4>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="Connect with students who are interested in working together on projects."
+                            data-zh="与有兴趣一起完成项目的学生建立联系。"
+                        >
+
+                            Connect with students who
+                            are interested in working together
+                            on projects.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CARD 3 -->
+
+            <div class="col-md-4">
+
+                <div class="card h-100 border-0 shadow-sm">
+
+                    <div class="card-body p-4">
+
+
+                        <div class="project-main-icon mb-3">
+
+                            <i class="bi bi-lightbulb"></i>
+
+                        </div>
+
+
+                        <h4
+                            data-en="Project Advice"
+                            data-zh="项目建议"
+                        >
+
+                            Project Advice
+
+                        </h4>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="Ask other students and teachers for ideas, feedback, and project guidance."
+                            data-zh="向其他学生和老师寻求想法、反馈和项目指导。"
+                        >
+
+                            Ask other students and teachers
+                            for ideas, feedback,
+                            and project guidance.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         QUESTIONS
+         ================================================= -->
+
+    <section class="mb-5">
+
+
+        <div class="section-heading">
+
+            <span class="section-label">
+
+                <span
+                    data-en="COMMUNITY QUESTIONS"
+                    data-zh="社区问题"
+                >
+                    COMMUNITY QUESTIONS
+                </span>
+
+            </span>
+
+
+            <h2
+                data-en="Questions from NCU students"
+                data-zh="南昌大学学生的问题"
+            >
+
+                Questions from NCU students
+
+            </h2>
+
+
+            <p
+                data-en="Browse questions or search for a problem that has already been discussed."
+                data-zh="浏览问题，或搜索已经讨论过的问题。"
+            >
+
+                Browse questions or search
+                for a problem that has already
+                been discussed.
+
+            </p>
+
+        </div>
+
+
+        <div id="questionsContainer">
+
+
+            <!-- DEFAULT QUESTION 1 -->
+
+            <div class="question-card">
+
+                <div class="card border-0 shadow-sm rounded-4 mb-3">
+
+                    <div class="card-body">
+
+
+                        <span class="badge bg-primary">
+
+                            Software Engineering
+
+                        </span>
+
+
+                        <h5
+                            class="fw-bold mt-2"
+                            data-en="How can I improve my JavaScript project?"
+                            data-zh="如何改进我的 JavaScript 项目？"
+                        >
+
+                            How can I improve my JavaScript project?
+
+                        </h5>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="I am building a university project and need advice about organizing my JavaScript files."
+                            data-zh="我正在开发一个大学项目，需要关于如何组织 JavaScript 文件的建议。"
+                        >
+
+                            I am building a university project
+                            and need advice about organizing
+                            my JavaScript files.
+
+                        </p>
+
+
+                        <small class="text-muted">
+
+                            <span
+                                data-en="Posted by NCU Student"
+                                data-zh="由南昌大学学生发布"
+                            >
+
+                                Posted by NCU Student
+
+                            </span>
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DEFAULT QUESTION 2 -->
+
+            <div class="question-card">
+
+                <div class="card border-0 shadow-sm rounded-4 mb-3">
+
+                    <div class="card-body">
+
+
+                        <span class="badge bg-primary">
+
+                            Cybersecurity
+
+                        </span>
+
+
+                        <h5
+                            class="fw-bold mt-2"
+                            data-en="Where should I start learning cybersecurity?"
+                            data-zh="我应该从哪里开始学习网络安全？"
+                        >
+
+                            Where should I start learning cybersecurity?
+
+                        </h5>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="I want to build a cybersecurity project but I don't know which topic to choose."
+                            data-zh="我想开发一个网络安全项目，但不知道应该选择什么主题。"
+                        >
+
+                            I want to build a cybersecurity
+                            project but I don't know which
+                            topic to choose.
+
+                        </p>
+
+
+                        <small class="text-muted">
+
+                            <span
+                                data-en="Posted by NCU Student"
+                                data-zh="由南昌大学学生发布"
+                            >
+
+                                Posted by NCU Student
+
+                            </span>
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DEFAULT QUESTION 3 -->
+
+            <div class="question-card">
+
+                <div class="card border-0 shadow-sm rounded-4 mb-3">
+
+                    <div class="card-body">
+
+
+                        <span class="badge bg-primary">
+
+                            Artificial Intelligence
+
+                        </span>
+
+
+                        <h5
+                            class="fw-bold mt-2"
+                            data-en="What AI tools can help with student projects?"
+                            data-zh="哪些人工智能工具可以帮助学生完成项目？"
+                        >
+
+                            What AI tools can help with student projects?
+
+                        </h5>
+
+
+                        <p
+                            class="text-muted"
+                            data-en="I would like to learn how to use AI tools responsibly during university projects."
+                            data-zh="我想学习如何在大学项目中合理地使用人工智能工具。"
+                        >
+
+                            I would like to learn how
+                            to use AI tools responsibly
+                            during university projects.
+
+                        </p>
+
+
+                        <small class="text-muted">
+
+                            <span
+                                data-en="Posted by NCU Student"
+                                data-zh="由南昌大学学生发布"
+                            >
+
+                                Posted by NCU Student
+
+                            </span>
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ASK QUESTION
+         ================================================= -->
+
+    <section class="mb-5">
+
+
+        <div class="card border-0 shadow-sm rounded-4">
+
+            <div class="card-body p-4 p-md-5">
+
+
+                <span class="section-label">
+
+                    <span
+                        data-en="ASK THE COMMUNITY"
+                        data-zh="向社区提问"
+                    >
+
+                        ASK THE COMMUNITY
+
+                    </span>
+
+                </span>
+
+
+                <h2
+                    class="mt-2"
+                    data-en="Have a question?"
+                    data-zh="有问题吗？"
+                >
+
+                    Have a question?
+
+                </h2>
+
+
+                <p
+                    class="text-muted"
+                    data-en="Ask the NCU Hub community and get help from students and teachers."
+                    data-zh="向 NCU Hub 社区提问，并从学生和老师那里获得帮助。"
+                >
+
+                    Ask the NCU Hub community
+                    and get help from students
+                    and teachers.
+
+                </p>
+
+
+
+                <!-- TITLE -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="questionTitle"
+                        class="form-label fw-semibold"
+                        data-en="Question Title"
+                        data-zh="问题标题"
+                    >
+
+                        Question Title
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="questionTitle"
+                        class="form-control"
+                        placeholder="What do you need help with?"
+                        data-en-placeholder="What do you need help with?"
+                        data-zh-placeholder="你需要什么帮助？"
+                    >
+
+                </div>
+
+
+
+                <!-- CATEGORY -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="questionCategory"
+                        class="form-label fw-semibold"
+                        data-en="Category"
+                        data-zh="类别"
+                    >
+
+                        Category
+
+                    </label>
+
+
+                    <select
+                        id="questionCategory"
+                        class="form-select"
+                    >
+
+                        <option
+                            value=""
+                            data-en="Choose a category"
+                            data-zh="选择类别"
+                        >
+
+                            Choose a category
+
+                        </option>
+
+
+                        <option
+                            value="Software Engineering"
+                            data-en="Software Engineering"
+                            data-zh="软件工程"
+                        >
+
+                            Software Engineering
+
+                        </option>
+
+
+                        <option
+                            value="Artificial Intelligence"
+                            data-en="Artificial Intelligence"
+                            data-zh="人工智能"
+                        >
+
+                            Artificial Intelligence
+
+                        </option>
+
+
+                        <option
+                            value="Cybersecurity"
+                            data-en="Cybersecurity"
+                            data-zh="网络安全"
+                        >
+
+                            Cybersecurity
+
+                        </option>
+
+
+                        <option
+                            value="Data Science"
+                            data-en="Data Science"
+                            data-zh="数据科学"
+                        >
+
+                            Data Science
+
+                        </option>
+
+
+                        <option
+                            value="Other"
+                            data-en="Other"
+                            data-zh="其他"
+                        >
+
+                            Other
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- DESCRIPTION -->
+
+                <div class="mb-3">
+
+                    <label
+                        for="questionDescription"
+                        class="form-label fw-semibold"
+                        data-en="Describe your question"
+                        data-zh="描述你的问题"
+                    >
+
+                        Describe your question
+
+                    </label>
+
+
+                    <textarea
+                        id="questionDescription"
+                        class="form-control"
+                        rows="5"
+                        placeholder="Explain your problem..."
+                        data-en-placeholder="Explain your problem..."
+                        data-zh-placeholder="请详细描述你的问题..."
+                    ></textarea>
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    type="button"
+                    class="btn btn-primary w-100"
+                    onclick="submitQuestion()"
+                    data-en="Post Question"
+                    data-zh="发布问题"
+                >
+
+                    Post Question
+
+                </button>
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="questionMessage"
+                    class="text-center mt-3"
+                ></div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         COLLABORATION CTA
+         ================================================= -->
+
+    <section class="ncu-cta">
+
+        <div>
+
+            <span class="section-label light">
+
+                <span
+                    data-en="BUILD TOGETHER"
+                    data-zh="共同建设"
+                >
+
+                    BUILD TOGETHER
+
+                </span>
+
+            </span>
+
+
+            <h2
+                data-en="Need a project partner?"
+                data-zh="需要项目合作伙伴吗？"
+            >
+
+                Need a project partner?
+
+            </h2>
+
+
+            <p
+                data-en="Explore student projects and connect with students who want to collaborate."
+                data-zh="浏览学生项目，并与希望合作的学生建立联系。"
+            >
+
+                Explore student projects
+                and connect with students
+                who want to collaborate.
+
+            </p>
+
+        </div>
+
+
+        <a
+            href="projects.html"
+            class="cta-button"
+        >
+
+            <span
+                data-en="Explore Projects"
+                data-zh="浏览项目"
+            >
+
+                Explore Projects
+
+            </span>
+
+
+            <i class="bi bi-arrow-right"></i>
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer class="ncu-footer">
+
+    <div class="container footer-content">
+
+
+        <div>
+
+            <strong>
+                NCU Hub
+            </strong>
+
+
+            <p
+                data-en="Nanchang University Student Platform"
+                data-zh="南昌大学学生平台"
+            >
+
+                Nanchang University Student Platform
+
+            </p>
+
+        </div>
+
+
+        <p
+            data-en="© 2026 NCU Hub Project"
+            data-zh="© 2026 NCU Hub 项目"
+        >
+
+            © 2026 NCU Hub Project
+
+        </p>
+
+
+    </div>
+
+</footer>
+
+
+
+</body>
+
+</html>
+```
